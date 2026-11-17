@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#263b32">
+<title>Para mi Emilio</title>
+<style>
+:root{
+  --olive:#263b32; --olive2:#405748; --sage:#a9b59b; --paper:#f5eedf;
+  --ink:#354338; --lilac:#c8aabd; --rose:#e7c8c8; --gold:#d8c49b;
+}
+*{box-sizing:border-box}
+body{
+  margin:0; min-height:100vh; color:var(--ink);
+  font-family:Georgia,"Times New Roman",serif;
+  background:
+    radial-gradient(ellipse at 12% 8%,rgba(200,170,189,.28),transparent 30%),
+    radial-gradient(ellipse at 90% 90%,rgba(169,181,155,.35),transparent 35%),
+    #e9e4d8;
+}
+button{font:inherit;cursor:pointer}
+.page{width:min(900px,calc(100% - 28px));margin:32px auto 60px}
+.cover{
+  min-height:570px;padding:48px 24px;border-radius:26px;background:var(--olive);
+  color:var(--paper);display:flex;flex-direction:column;align-items:center;justify-content:center;
+  text-align:center;position:relative;overflow:hidden;box-shadow:0 22px 60px #263b3230;
+}
+.cover:before,.cover:after{content:"✿";position:absolute;color:#b6c4a2;font-size:110px;opacity:.22}
+.cover:before{top:18px;left:22px;transform:rotate(-20deg)}
+.cover:after{bottom:14px;right:25px;transform:rotate(25deg)}
+.kicker{letter-spacing:.22em;text-transform:uppercase;font:11px Arial,sans-serif;color:#d7c9a9}
+h1{font-size:clamp(38px,7vw,68px);font-weight:normal;font-style:italic;line-height:1.04;margin:18px 0}
+.subtitle{font-size:17px;line-height:1.7;max-width:510px;color:#e7dfd0}
+.open-btn,.action{
+  border:1px solid #d8c49b;background:transparent;color:var(--paper);
+  padding:13px 23px;border-radius:30px;margin-top:24px;transition:.2s
+}
+.open-btn:hover,.action:hover{background:#ffffff18;transform:translateY(-2px)}
+.small-flower{font-size:34px;color:var(--lilac);margin:12px}
+.letter{display:none;margin-top:22px;background:var(--paper);border:1px solid #d9d0bd;border-radius:24px;overflow:hidden;box-shadow:0 18px 50px #263b3218}
+.letter.show{display:block;animation:rise .7s ease both}
+@keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+.inner{padding:clamp(22px,5vw,55px)}
+.topline{text-align:center;color:#8a927f;font:11px Arial,sans-serif;letter-spacing:.2em;text-transform:uppercase}
+h2{font-size:30px;font-weight:normal;font-style:italic;color:var(--olive);margin:12px 0 22px;text-align:center}
+.intro{font-size:18px;line-height:1.9}
+.section{border-top:1px solid #d9d0bd;padding:26px 0}
+.section h3{font-size:23px;font-style:italic;font-weight:normal;color:var(--olive2);margin:0 0 12px}
+.section p{font-size:17px;line-height:1.9;margin:10px 0}
+.memory{background:#e9e8dc;border-left:3px solid var(--sage);padding:17px 20px;border-radius:0 14px 14px 0}
+.memory strong{color:var(--olive)}
+.hidden-note{display:none;margin:14px 0 0;padding:15px;background:#eee4eb;border-radius:12px;line-height:1.7}
+.hidden-note.show{display:block;animation:rise .4s ease}
+.flower-btn{border:0;background:transparent;font-size:31px;padding:8px;filter:drop-shadow(0 2px 2px #0001)}
+.flower-row{display:flex;justify-content:center;gap:18px;margin:14px 0}
+.promise{font-style:italic;font-size:20px!important;color:var(--olive);text-align:center;padding:8px 0}
+.signature{text-align:center;padding-top:22px;color:var(--olive2);font-style:italic;font-size:23px}
+.footer{text-align:center;color:#6d796d;font:11px Arial,sans-serif;letter-spacing:.12em;padding:22px}
+@media(max-width:560px){.cover{min-height:510px}.section p,.intro{font-size:16px}.page{margin-top:14px}}
+</style>
+</head>
+<body>
+<main class="page">
+  <section class="cover" id="cover">
+    <div class="kicker">Un pequeña carta para ti</div>
+    <div class="small-flower">✿</div>
+    <h1>Para mi querido Emi</h1>
+    <p class="subtitle">Hay palabras que a veces se me enredan cuando intento decirlas en voz alta. Así que hice algo con ellas: las convertí en un lugar al que puedas volver.</p>
+    <button class="open-btn" id="openLetter">Abrir mi carta ♡</button>
+    <div class="kicker" style="margin-top:28px">Escrito con cariño, programado por Lady</div>
+  </section>
+
+  <article class="letter" id="letter">
+    <div class="inner">
+      <div class="topline">Con todo mi cariño</div>
+      <h2>Emi, hice esto para ti.</h2>
+      <p class="intro">Sé que quizás no sea la gran cosa, pero es algo que nació de mi honestidad, de mis sentimientos y de todas esas palabras que aparecen en mi corazón cuando mi mente piensa en ti.</p>
+      <p class="intro">Tú siempre encuentras una manera de hacer algo especial por mí: tus poemas, tus canciones, tus palabras y, sobre todo, esa forma tan tuya de estar presente. Por eso, esta vez quiero ser yo quien haga algo por ti. Quiero regalarte un pedacito de lo que llevo dentro, así como tú tantas veces me has regalado un pedacito de ti.</p>
+
+      <section class="section">
+        <h3>Cómo llegaste a mi vida</h3>
+        <p>Antes de que llegaras, enamorarme de alguien no era algo que pasara por mi cabeza. Y aunque siempre he sido alguien que ama el amor, no estaba esperando encontrarlo en una persona.</p>
+        <p>Poco a poco fui conociéndote. Al principio me pareciste alguien interesante, pero conforme pasaba el tiempo, cada conversación, cada interacción e incluso cada vez que te veía, encontraba algo que me gustaba de ti. Me encantaba tu manera de ser y, sobre todo, la forma en que me tratabas.</p>
+        <p>Hay algo que admiro especialmente de ti: tu constancia. Incluso cuando la distancia parecía alejarnos y llegaba a pensar que quizás ya no volveríamos a hablar, tú seguías encontrando maneras de estar presente.</p>
+        <p>No quería a alguien que simplemente dijera que quería estar conmigo, sino a alguien que también lo demostrara, que buscara compartir su tiempo conmigo y que hiciera algo por acercarse. Y así, sin darme cuenta, entre conversaciones, momentos y pequeños detalles, fui enamorándome de ti.</p>
+      </section>
+
+      <section class="section">
+        <h3>Las cosas que admiro de ti</h3>
+        <p>Me gusta que seas alguien que sabe escuchar, que tengas esa perseverancia para seguir adelante, tu curiosidad por descubrir y aprender cosas nuevas, y esa constancia que tanto te caracteriza.</p>
+        <p>Admiro tu creatividad, tu iniciativa y esa capacidad que tienes de encontrar maneras de hacer las cosas. Quizás no siempre te lo diga, pero me gusta observarte, escucharte y descubrir todas esas pequeñas partes de ti que te hacen ser quien eres.</p>
+        <p>Creo que una de las cosas más bonitas de quererte es que también puedo admirarte.</p>
+      </section>
+
+      <section class="section">
+        <h3>Un instante que guardaría</h3>
+        <div class="memory">
+          <p>Hay un recuerdo al que volvería si tuviera la oportunidad de detener el tiempo: aquel día en que cantamos juntos <strong>Cha Cha Chá</strong>.</p>
+          <p>Recuerdo especialmente ese momento en el que mencionamos el «yo te puedo enamorar». No sé si tú lo recuerdas de la misma manera, pero yo sentí una conexión especial contigo. Fue uno de esos instantes en los que algo tan sencillo puede adquirir un significado enorme.</p>
+          <p>Hoy me resulta bonito pensar en cómo algunas de las cosas que compartimos terminaron convirtiéndose en recuerdos que guardo con tanto cariño.</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <h3>Lo que provocas en mí</h3>
+        <p>Cada vez que tienes un detalle conmigo, mi corazón estalla como una bomba de alegría. Me haces sentir feliz, amada y querida de una manera que a veces ni siquiera sé explicar.</p>
+        <p>No es simplemente porque me digas cosas bonitas. Es porque aprecio cada una de tus palabras, el tiempo que dedicas a expresarlas y el cariño que encuentro detrás de ellas.</p>
+        <p>Tus poemas, tus canciones, tus declaraciones y hasta esas pequeñas cosas que quizás haces sin darte cuenta tienen un significado especial para mí.</p>
+      </section>
+
+      <section class="section">
+        <h3>Hasta que pueda abrazarte</h3>
+        <p>Hay algo que todavía espero con mucha ilusión: volver a verte y poder abrazarte.</p>
+        <p>Desde aquella primera y única vez que nos vimos, no he tenido la oportunidad de volver a hacerlo. Y aunque todavía no sé cuándo llegará ese momento, hay algo que tengo claro: cuando vuelva a tenerte frente a mí, quisiera abrazarte como quien finalmente encuentra algo que llevaba mucho tiempo esperando.</p>
+        <p>Quisiera que ese abrazo pudiera guardar todo aquello que las palabras, las llamadas y la distancia no me han permitido expresar. Y si pudiera elegir, desearía que fuera uno de esos abrazos que uno quisiera llevar consigo para siempre.</p>
+      </section>
+
+      <section class="section">
+        <h3>Quiero que nunca lo olvides</h3>
+        <p>Quiero que sepas que siempre voy a apoyarte, que estaré para ti y que me siento muy orgullosa de la persona que eres.</p>
+        <p>Quiero que recuerdes que no estás solo, que tienes a alguien dispuesto a escucharte, a acompañarte en tus días buenos y también en aquellos en los que las cosas no salgan como esperabas.</p>
+        <p>Quiero verte cumplir tus sueños, descubrir nuevas cosas, crecer y convertirte en esa persona que tanto deseas ser. Quiero poder celebrar tus logros, incluso aquellos que para los demás puedan parecer pequeños.</p>
+        <p>No quiero que nunca dudes de que tienes en mí a alguien que cree en ti.</p>
+      </section>
+
+      <section class="section">
+        <h3>Mi promesa para ti</h3>
+        <p>Te prometo amar cada cosa de ti: cada locura, cada ocurrencia, cada nuevo tema de conversación y cada una de esas pequeñas particularidades que te hacen ser quien eres.</p>
+        <p>Prometo seguir descubriéndote, porque sé que todavía hay muchas cosas de ti que no conozco y que me encantaría descubrir con el tiempo.</p>
+        <p>Quiero que nunca perdamos esa curiosidad por conocernos, esas ganas de conversar y esa complicidad que poco a poco hemos construido.</p>
+        <p class="promise">Y deseo que cada nuevo día encuentre una razón más para enamorarme de Emilio.</p>
+      </section>
+
+      <section class="section">
+        <h3>Pequeñas flores, pequeños mensajes</h3>
+        <p style="text-align:center">Pulsa cada flor. Hay unas palabras más que quería dejarte.</p>
+        <div class="flower-row">
+          <button class="flower-btn" aria-label="Mensaje uno" data-note="Gracias por hacerme un espacio en tus días y por buscarme incluso cuando la distancia parece grande.">✿</button>
+          <button class="flower-btn" aria-label="Mensaje dos" data-note="Estoy orgullosa de ti, Emi. También en los días en que tú mismo no alcances a verlo.">❀</button>
+          <button class="flower-btn" aria-label="Mensaje tres" data-note="No tienes que tener siempre las palabras correctas conmigo. También quiero escucharte cuando no sepas qué decir.">✾</button>
+        </div>
+        <div class="hidden-note" id="hiddenNote" aria-live="polite"></div>
+      </section>
+   <div style="
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:30px 15px;
+">
+  <p style="font-style:italic; color:#405748; font-size:19px;">
+    Una pequeña sorpresa de mi voz para ti ♡
+  </p>
+
+  <audio controls preload="auto">
+    <source src="./para Emi.mp3" type="audio/mpeg">
+  </audio>
+</div>
+      <section class="section">
+        <p class="promise">Gracias por ser tú. Gracias por coincidir conmigo.</p>
+        <p class="signature">Con amor,<br>Leydiesky</p>
+      </section>
+    </div>
+<div style="
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  margin: top 5px;;
+">
+  <img
+    src="lady.jpeg"
+    alt="Una fotografía de Lady"
+    style="
+      width:180px;
+      height:220px;
+      object-fit:cover;
+      border-radius:12px;
+      border:4px solid #d8c49b;
+      box-shadow:0 5px 18px #263b3230;
+    "
+  >
+</div>
+    <div class="footer">HECHO CON PALABRAS, RECUERDOS Y UN POQUITO DE CÓDIGO</div>
+  </article>
+</main>
+<script>
+const openButton = document.getElementById('openLetter');
+const letter = document.getElementById('letter');
+openButton.addEventListener('click', () => {
+  letter.classList.add('show');
+  letter.scrollIntoView({behavior:'smooth', block:'start'});
+  openButton.textContent = 'Mi carta está abierta ♡';
+});
+const hiddenNote = document.getElementById('hiddenNote');
+document.querySelectorAll('.flower-btn').forEach((flower) => {
+  flower.addEventListener('click', () => {
+    hiddenNote.textContent = flower.dataset.note;
+    hiddenNote.classList.add('show');
+  });
+});
+</script>
+</body>
+</html>
